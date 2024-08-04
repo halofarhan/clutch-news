@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.radio {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+  }
+  
+  .radio__input {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #06a54b; /* Border color */
+    border-radius: 50%; /* Rounded shape */
+    outline: none;
+    cursor: pointer;
+    margin-right: 8px; /* Spacing between input and label */
+  }
+  
+  .radio__input:checked {
+    background-color: #06a54b; /* Checked background color */
+  }
+  
+  .radio__label {
+    cursor: pointer;
+    user-select: none;
+    font-size: 16px;
+    color: #06a54b; /* Label color */
+  }
