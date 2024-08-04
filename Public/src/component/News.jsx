@@ -28,6 +28,10 @@ function News({ }) {
         }
     }
 
+    function toCategory(id,category) {
+        navigate(`/${category}`)
+    }
+
     useEffect(() => {
         fetchData()
     }, [search, page,sort])

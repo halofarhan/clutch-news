@@ -8,6 +8,10 @@ function Card({ data }) {
         navigate(`/${category}/${id}`)
     }
 
+    function toCategory(id,category) {
+        navigate(`/${category}`)
+    }
+
     return (
         <>
             <div className="mb-7 card bg-base-100 group  w-80 rounded-md flex justify-start transition duration-300 ease-in-out hover:shadow-xl dark:hover:shadow-black/30">
@@ -18,7 +22,7 @@ function Card({ data }) {
                         className="rounded-md h-48" />
                 </figure>
                 <div className="card-body pt-2">
-                    <div className="mb-2 badge badge-secondary border-none p-3 bg-[#06a54b] text-white group-before:ease relative overflow-hidden border border-green-500  shadow-2xl transition-all before:absolute before:right-0 before:top-0 before:h-12 before:w-6 before:translate-x-12 before:rotate-6 before:bg-white before:opacity-10 before:duration-1000 group-hover:shadow-green-500 group-hover:before:-translate-x-40">{data.Category.name}</div>
+                    <div className="mb-2 badge badge-secondary border-none p-3 bg-[#06a54b] text-white group-before:ease relative overflow-hidden border border-green-500  shadow-2xl transition-all before:absolute before:right-0 before:top-0 before:h-12 before:w-6 before:translate-x-12 before:rotate-6 before:bg-white before:opacity-10 before:duration-1000 group-hover:shadow-green-500 group-hover:before:-translate-x-40" onClick={toCategory(data.Category.name)}>{data.Category.name}</div>
                     <h2 className="truncate-2-lines card-title font-poppins group-hover:text-[#06a54b] transition duration-300 ease-in-out">
                         {data.title}
                     </h2>

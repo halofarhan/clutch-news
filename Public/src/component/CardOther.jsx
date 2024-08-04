@@ -8,6 +8,10 @@ function CardOther({ data }) {
     navigate(`/${category}/${id}`)
   }
 
+  function toCategory(id,category) {
+    navigate(`/${category}`)
+}
+
   return (
     <div className="card rounded-md lg:card-side mx-48 mt-8 h-52 group hover:-translate-y-0.5 transition-all duration-300">
       <figure>
@@ -17,7 +21,7 @@ function CardOther({ data }) {
           alt="Album" />
       </figure>
       <div className="card-body w-60 pt-4">
-        <div className="badge badge-secondary border-none p-3 bg-[#06a54b] text-white group-before:ease relative overflow-hidden border border-green-500  shadow-2xl transition-all before:absolute before:right-0 before:top-0 before:h-12 before:w-6 before:translate-x-12 before:rotate-6 before:bg-white before:opacity-10 before:duration-1000 group-hover:shadow-green-500 group-hover:before:-translate-x-40">{data.Category.name}</div>
+        <div className="badge badge-secondary border-none p-3 bg-[#06a54b] text-white group-before:ease relative overflow-hidden border border-green-500  shadow-2xl transition-all before:absolute before:right-0 before:top-0 before:h-12 before:w-6 before:translate-x-12 before:rotate-6 before:bg-white before:opacity-10 before:duration-1000 group-hover:shadow-green-500 group-hover:before:-translate-x-40" onClick={toCategory(data.Category.name)}>{data.Category.name}</div>
         <h2 className="card-title font-poppins group-hover:text-[#06a54b] transition duration-300 ease-in-out">{data.title}</h2>
         <div className="">
           <p className="truncate" >{data.content}</p>
